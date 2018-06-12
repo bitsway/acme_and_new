@@ -1,6 +1,7 @@
 //var apipath='http://127.0.0.1:8000/mrepmobile_new/android_acme_new/'
 //var apipath='http://m.businesssolutionapps.com/mrepmobile/android_acme/'
-var apipath='http://e.businesssolutionapps.com/mrepmobile/android_acme_new/'
+//var apipath='http://e.businesssolutionapps.com/mrepmobile/android_acme_new/'
+var apipath='http://e.businesssolutionapps.com/mrepmobile/android_acme_new_CashCredit/'
 
 
 var mobile_off_flag=0;
@@ -967,6 +968,10 @@ function lscVisitSubmit(){
 	var lscPhoto=$("#lscPhoto").val();
 	var lat=$("#lat").val();
 	var long=$("#long").val();
+	var cash_credit=$("#cash_credit").val();
+	
+	
+	
 	var now = $.now();
 	lat==0;
 	long==0;
@@ -998,11 +1003,11 @@ function lscVisitSubmit(){
 					
 					
 
-					//$("#errorChkVSubmit").text(localStorage.base_url+'visitSubmit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&client_id='+visitClientId+'&visit_type='+visit_type+'&schedule_date='+scheduled_date+'&market_info='+marketInfoStr+'&order_info='+productOrderStr+'&merchandizing='+marchandizingInfoStr+'&campaign='+campaign_str+'&lat='+lat+'&long='+long+'&visit_photo='+imageName+'&httpPass='+localStorage.httppass+'&depot='+localStorage.depot+'&area_id='+localStorage.market_Id)
+					//alert (localStorage.base_url+'visitSubmit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&client_id='+visitClientId+'&visit_type='+visit_type+'&schedule_date='+scheduled_date+'&market_info='+marketInfoStr+'&order_info='+productOrderStr+'&merchandizing='+marchandizingInfoStr+'&campaign='+campaign_str+'&lat='+lat+'&long='+long+'&visit_photo='+imageName+'&httpPass='+localStorage.httppass+'&depot='+localStorage.depot+'&area_id='+localStorage.market_Id+'&cash_credit='+cash_credit)
 					// ajax-------
 					$.ajax({
 						 type: 'POST',
-						 url: localStorage.base_url+'visitSubmit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&client_id='+visitClientId+'&visit_type='+visit_type+'&schedule_date='+scheduled_date+'&market_info='+marketInfoStr+'&order_info='+productOrderStr+'&merchandizing='+marchandizingInfoStr+'&campaign='+campaign_str+'&lat='+lat+'&long='+long+'&visit_photo='+imageName+'&httpPass='+localStorage.httppass+'&depot='+localStorage.depot+'&area_id='+localStorage.market_Id,
+						 url: localStorage.base_url+'visitSubmit?cid='+localStorage.cid+'&rep_id='+localStorage.user_id+'&rep_pass='+localStorage.user_pass+'&synccode='+localStorage.synccode+'&client_id='+visitClientId+'&visit_type='+visit_type+'&schedule_date='+scheduled_date+'&market_info='+marketInfoStr+'&order_info='+productOrderStr+'&merchandizing='+marchandizingInfoStr+'&campaign='+campaign_str+'&lat='+lat+'&long='+long+'&visit_photo='+imageName+'&httpPass='+localStorage.httppass+'&depot='+localStorage.depot+'&area_id='+localStorage.market_Id+'&cash_credit='+cash_credit,
 						 success: function(result) {
 								
 								//alert(result);
